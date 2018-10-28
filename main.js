@@ -231,6 +231,7 @@ function divMove(e){
       }
       console.log(stateName);
 
+      console.log(pop_density[0]["2010_POPULATION"]);
       for (i=0;i<pop_density.length;i++){
         if(stateName == pop_density[i]["STATE_OR_REGION"]){
           console.log(pop_density[i]["2010_POPULATION"]);
