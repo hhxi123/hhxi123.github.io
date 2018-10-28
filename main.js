@@ -242,6 +242,6 @@ function divMove(e){
         }
         document.getElementById('state').innerHTML = stateName;
         oldLatLng = textMarker.getLatLng();
-      }
-  })
+    })
+  }
 }
