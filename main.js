@@ -1,6 +1,6 @@
 var pinx = 39.0997;
 var piny = -94.5786;
-
+var pop_density = [];
 
 //main function
 window.onload = function() {
@@ -30,6 +30,7 @@ window.onload = function() {
   }).addTo(map);
   console.log(textMarker);
 
+
   $.ajax({
       url: "pop_density.csv",
       async: false,
@@ -40,6 +41,8 @@ window.onload = function() {
       complete: function () {
           // call a function on complete
           console.log(data);
+          pop_density = data;
+          console.log(data[0]);
       }
   });
 }
@@ -228,6 +231,7 @@ function divMove(e){
         stateName = "Wyoming";
       }
       console.log(stateName);
+
       document.getElementById('state').innerHTML = stateName;
   })
 }
