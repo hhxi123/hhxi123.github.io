@@ -42,7 +42,6 @@ window.onload = function() {
           // call a function on complete
           console.log(data);
           pop_density = data;
-          console.log(data[0]);
       }
   });
 }
@@ -234,7 +233,7 @@ function divMove(e){
 
       for (i=0;i<pop_density.length;i++){
         if(stateName == pop_density[i]["STATE_OR_REGION"]){
-          console.log(pop_density[i]["2010_POPULATION"])
+          console.log(pop_density[i]["2010_POPULATION"]);
         }
       }
       document.getElementById('state').innerHTML = stateName;
