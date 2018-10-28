@@ -72,171 +72,176 @@ window.onload = function() {
 //     console.log(popDensTable);
 // }
 
+var oldLatLng;
+
 function divMove(e){
-  pinx = e.clientx;
-  piny = e.clientY;
-  console.log(textMarker.getLatLng());                  //latitude                                                          longitude
-  document.getElementById('coords').innerHTML = '' +  textMarker._latlng[Object.keys(textMarker._latlng)[0]] + ' ' +   textMarker._latlng[Object.keys(textMarker._latlng)[1]];
+  if (textMarker.getLatLng() != oldLatLng) {
+    pinx = e.clientx;
+    piny = e.clientY;
+    console.log(textMarker.getLatLng());                  //latitude                                                          longitude
+    document.getElementById('coords').innerHTML = '' +  textMarker._latlng[Object.keys(textMarker._latlng)[0]] + ' ' +   textMarker._latlng[Object.keys(textMarker._latlng)[1]];
 
-  fetch('http://open.mapquestapi.com/geocoding/v1/reverse?key=' + L.mapquest.key + '&location=' + textMarker._latlng[Object.keys(textMarker._latlng)[0]] + ','+ textMarker._latlng[Object.keys(textMarker._latlng)[1]] + '&includeRoadMetadata=true&includeNearestIntersection=true')
-  .then(function(data) {
-      return data.json();
-  })
-  .then(function(data) {
-      console.log(data);
-      var stateName = data["results"][0]["locations"][0]["adminArea3"];
-      if(stateName == "AL"){
-        stateName = "Alabama";
-      }
-      if(stateName == "AZ"){
-        stateName = "Arizona";
-      }
-      if(stateName == "AR"){
-        stateName = "Arkansas";
-      }
-      if(stateName == "CA"){
-        stateName = "California";
-      }
-      if(stateName == "CO"){
-        stateName = "Colorado";
-      }
-      if(stateName == "CT"){
-        stateName = "Connecticut";
-      }
-      if(stateName == "DE"){
-        stateName = "Delaware";
-      }
-      if(stateName == "FL"){
-        stateName = "Florida";
-      }
-      if(stateName == "GA"){
-        stateName = "Georgia";
-      }
-      if(stateName == "ID"){
-        stateName = "Idaho";
-      }
-      if(stateName == "IL"){
-        stateName = "Illinois";
-      }
-      if(stateName == "IN"){
-        stateName = "Indiana";
-      }
-      if(stateName == "IA"){
-        stateName = "Iowa";
-      }
-      if(stateName == "KS"){
-        stateName = "Kansas";
-      }
-      if(stateName == "KY"){
-        stateName = "Kentucky";
-      }
-      if(stateName == "LA"){
-        stateName = "Louisiana";
-      }
-      if(stateName == "ME"){
-        stateName = "Maine";
-      }
-      if(stateName == "MD"){
-        stateName = "Maryland";
-      }
-      if(stateName == "MA"){
-        stateName = "Massachusetts";
-      }
-      if(stateName == "MI"){
-        stateName = "Michigan";
-      }
-      if(stateName == "MN"){
-        stateName = "Minnesota";
-      }
-      if(stateName == "MS"){
-        stateName = "Mississippi";
-      }
-      if(stateName == "MO"){
-        stateName = "Missouri";
-      }
-      if(stateName == "MT"){
-        stateName = "Montana";
-      }
-      if(stateName == "NE"){
-        stateName = "Nebraska";
-      }
-      if(stateName == "NV"){
-        stateName = "Nevada";
-      }
-      if(stateName == "NH"){
-        stateName = "New Hampshire";
-      }
-      if(stateName == "NJ"){
-        stateName = "New Jersey";
-      }
-      if(stateName == "NM"){
-        stateName = "New Mexico";
-      }
-      if(stateName == "NY"){
-        stateName = "New York";
-      }
-      if(stateName == "NC"){
-        stateName = "North Carolina";
-      }
-      if(stateName == "ND"){
-        stateName = "North Dakota";
-      }
-      if(stateName == "OH"){
-        stateName = "Ohio";
-      }
-      if(stateName == "OK"){
-        stateName = "Oklahoma";
-      }
-      if(stateName == "OR"){
-        stateName = "Oregon";
-      }
-      if(stateName == "PA"){
-        stateName = "Pennsylvania";
-      }
-      if(stateName == "RI"){
-        stateName = "Rhode Island";
-      }
-      if(stateName == "SC"){
-        stateName = "South Carolina";
-      }
-      if(stateName == "SD"){
-        stateName = "South Dakota";
-      }
-      if(stateName == "TN"){
-        stateName = "Tennessee";
-      }
-      if(stateName == "TX"){
-        stateName = "Texas";
-      }
-      if(stateName == "UT"){
-        stateName = "Utah";
-      }
-      if(stateName == "VT"){
-        stateName = "Vermont";
-      }
-      if(stateName == "VA"){
-        stateName = "Virginia";
-      }
-      if(stateName == "WA"){
-        stateName = "Washington";
-      }
-      if(stateName == "WV"){
-        stateName = "West Virginia";
-      }
-      if(stateName == "WI"){
-        stateName = "Wisconsin";
-      }
-      if(stateName == "WY"){
-        stateName = "Wyoming";
-      }
-      console.log(stateName);
-
-      console.log(pop_density[0]["2010_POPULATION"]);
-      for (i=0;i<pop_density.length;i++){
-        if(stateName == pop_density[i]["STATE_OR_REGION"]){
-          console.log(pop_density[i]["2010_POPULATION"]);
+    fetch('http://open.mapquestapi.com/geocoding/v1/reverse?key=' + L.mapquest.key + '&location=' + textMarker._latlng[Object.keys(textMarker._latlng)[0]] + ','+ textMarker._latlng[Object.keys(textMarker._latlng)[1]] + '&includeRoadMetadata=true&includeNearestIntersection=true')
+    .then(function(data) {
+        return data.json();
+    })
+    .then(function(data) {
+        console.log(data);
+        var stateName = data["results"][0]["locations"][0]["adminArea3"];
+        if(stateName == "AL"){
+          stateName = "Alabama";
         }
+        if(stateName == "AZ"){
+          stateName = "Arizona";
+        }
+        if(stateName == "AR"){
+          stateName = "Arkansas";
+        }
+        if(stateName == "CA"){
+          stateName = "California";
+        }
+        if(stateName == "CO"){
+          stateName = "Colorado";
+        }
+        if(stateName == "CT"){
+          stateName = "Connecticut";
+        }
+        if(stateName == "DE"){
+          stateName = "Delaware";
+        }
+        if(stateName == "FL"){
+          stateName = "Florida";
+        }
+        if(stateName == "GA"){
+          stateName = "Georgia";
+        }
+        if(stateName == "ID"){
+          stateName = "Idaho";
+        }
+        if(stateName == "IL"){
+          stateName = "Illinois";
+        }
+        if(stateName == "IN"){
+          stateName = "Indiana";
+        }
+        if(stateName == "IA"){
+          stateName = "Iowa";
+        }
+        if(stateName == "KS"){
+          stateName = "Kansas";
+        }
+        if(stateName == "KY"){
+          stateName = "Kentucky";
+        }
+        if(stateName == "LA"){
+          stateName = "Louisiana";
+        }
+        if(stateName == "ME"){
+          stateName = "Maine";
+        }
+        if(stateName == "MD"){
+          stateName = "Maryland";
+        }
+        if(stateName == "MA"){
+          stateName = "Massachusetts";
+        }
+        if(stateName == "MI"){
+          stateName = "Michigan";
+        }
+        if(stateName == "MN"){
+          stateName = "Minnesota";
+        }
+        if(stateName == "MS"){
+          stateName = "Mississippi";
+        }
+        if(stateName == "MO"){
+          stateName = "Missouri";
+        }
+        if(stateName == "MT"){
+          stateName = "Montana";
+        }
+        if(stateName == "NE"){
+          stateName = "Nebraska";
+        }
+        if(stateName == "NV"){
+          stateName = "Nevada";
+        }
+        if(stateName == "NH"){
+          stateName = "New Hampshire";
+        }
+        if(stateName == "NJ"){
+          stateName = "New Jersey";
+        }
+        if(stateName == "NM"){
+          stateName = "New Mexico";
+        }
+        if(stateName == "NY"){
+          stateName = "New York";
+        }
+        if(stateName == "NC"){
+          stateName = "North Carolina";
+        }
+        if(stateName == "ND"){
+          stateName = "North Dakota";
+        }
+        if(stateName == "OH"){
+          stateName = "Ohio";
+        }
+        if(stateName == "OK"){
+          stateName = "Oklahoma";
+        }
+        if(stateName == "OR"){
+          stateName = "Oregon";
+        }
+        if(stateName == "PA"){
+          stateName = "Pennsylvania";
+        }
+        if(stateName == "RI"){
+          stateName = "Rhode Island";
+        }
+        if(stateName == "SC"){
+          stateName = "South Carolina";
+        }
+        if(stateName == "SD"){
+          stateName = "South Dakota";
+        }
+        if(stateName == "TN"){
+          stateName = "Tennessee";
+        }
+        if(stateName == "TX"){
+          stateName = "Texas";
+        }
+        if(stateName == "UT"){
+          stateName = "Utah";
+        }
+        if(stateName == "VT"){
+          stateName = "Vermont";
+        }
+        if(stateName == "VA"){
+          stateName = "Virginia";
+        }
+        if(stateName == "WA"){
+          stateName = "Washington";
+        }
+        if(stateName == "WV"){
+          stateName = "West Virginia";
+        }
+        if(stateName == "WI"){
+          stateName = "Wisconsin";
+        }
+        if(stateName == "WY"){
+          stateName = "Wyoming";
+        }
+        console.log(stateName);
+
+        console.log(pop_density[0]["2010_POPULATION"]);
+        for (i=0;i<pop_density.length;i++){
+          if(stateName == pop_density[i]["STATE_OR_REGION"]){
+            console.log(pop_density[i]["2010_POPULATION"]);
+          }
+        }
+        document.getElementById('state').innerHTML = stateName;
+        oldLatLng = textMarker.getLatLng();
       }
-      document.getElementById('state').innerHTML = stateName;
   })
 }
