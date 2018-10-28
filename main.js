@@ -232,6 +232,11 @@ function divMove(e){
       }
       console.log(stateName);
 
+      for (i=0;i<pop_density.length;i++){
+        if(stateName == pop_density[i]["STATE_OR_REGION"]){
+          console.log(pop_density[i]["2010_POPULATION"])
+        }
+      }
       document.getElementById('state').innerHTML = stateName;
   })
 }
