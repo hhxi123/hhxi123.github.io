@@ -76,7 +76,7 @@ function divMove(e){
   console.log(textMarker.getLatLng());                  //latitude                                                          longitude
   document.getElementById('coords').innerHTML = '' +  textMarker._latlng[Object.keys(textMarker._latlng)[0]] + ' ' +   textMarker._latlng[Object.keys(textMarker._latlng)[1]];
 
-  fetch('http://open.mapquestapi.com/geocoding/v1/reverse?key=' + L.mapquest.key + '&location=' + textMarker._latlng[Object.keys(textMarker._latlng)[0]] + ','+ textMarker._latlng[Object.keys(textMarker._latlng)[1]] + '&includeRoadMetadata=true&includeNearestIntersection=true')
+  fetch('https://open.mapquestapi.com/geocoding/v1/reverse?key=' + L.mapquest.key + '&location=' + textMarker._latlng[Object.keys(textMarker._latlng)[0]] + ','+ textMarker._latlng[Object.keys(textMarker._latlng)[1]] + '&includeRoadMetadata=true&includeNearestIntersection=true')
   .then(function(data) {
       return data.json();
   })
