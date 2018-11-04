@@ -1,7 +1,6 @@
 var pinx = 39.0997;
 var piny = -94.5786;
 var pop_density = [];
-Boolean activeMarker = false;
 
 //main function
 window.onload = function() {
@@ -86,7 +85,8 @@ function divMove(e){
     console.log(textMarker.getLatLng());                  //latitude                                                          longitude
     document.getElementById('coords').innerHTML = '' +  latitude + ' ' + longitude;
 
-    fetch('http://open.mapquestapi.com/geocoding/v1/reverse?key=' + L.mapquest.key + '&location=' + latitude + ','+ longitude + '&includeRoadMetadata=true&includeNearestIntersection=true')
+    fetch('http://open.mapquestapi.com/geocoding/v1/reverse?key=' + L.mapquest.key +
+      '&location=' + latitude + ','+ longitude + '&includeRoadMetadata=true&includeNearestIntersection=true')
     .then(function(data) {
         return data.json();
     })
@@ -239,14 +239,19 @@ function divMove(e){
         }
         console.log(stateName);
 
-        console.log(pop_density[0]["2010_POPULATION"]);
+        console.log("United States Population: " + pop_density[0]["2010_POPULATION"]);
         for (i=0;i<pop_density.length;i++){
           if(stateName == pop_density[i]["STATE_OR_REGION"]){
-            console.log(pop_density[i]["2010_POPULATION"]);
+            console.log(stateName + " Population: " + pop_density[i]["2010_POPULATION"]);
           }
         }
         document.getElementById('state').innerHTML = stateName;
         oldLatLng = textMarker.getLatLng();
     })
   }
+}
+
+function detonate(lat, lng){
+
+
 }

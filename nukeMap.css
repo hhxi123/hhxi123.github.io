@@ -38,3 +38,12 @@ body{
   font-size-adjust: auto;
   font-size: 32px;
 }
+
+#Detonate{
+  background-color: #970000;
+  border-style: solid;
+  border-color: #000000;
+  border-width: medium;
+  font-size: 200%;
+  font-weight: 400;
+}
