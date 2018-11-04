@@ -54,8 +54,8 @@ body{
 
 #bigCircle{
   z-index: 499;
-  height: 200px;
   weight: 200px;
+  height: 200px;
   position: fixed;
   border-radius: 50%;
 }
