@@ -39,15 +39,16 @@ body{
   font-size: 32px;
 }
 
-/*#Detonate{
-  /*z-index: 500;
-  /*position: relative;
-  /*margin-left: 1200px;
-  /*margin-top: 500px;
-  /*font-size: 200%;
-  /*font-weight: 400;
-  /*background-color: #970000;
-  /*border-style: solid;
-  /*border-color: #000000;
-  /*border-width: medium;
-}*/
+#Detonate{
+  z-index: 500;
+  position: relative;
+  margin-left: 1200px;
+  margin-top: 500px;
+  margin-bottom: 1200px;
+  font-size: 200%;
+  font-weight: 400;
+  background-color: #970000;
+  border-style: solid;
+  border-color: #000000;
+  border-width: medium;
+}
