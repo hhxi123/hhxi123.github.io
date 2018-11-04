@@ -7,8 +7,9 @@ window.onload = function() {
 
   window.addEventListener('mousemove', divMove, true);
 
-  L.mapquest.key = 'vYcB2ukMaEGdV9xsGvmnIqMhlnL6dadU';
-
+  L.mapquest.key = 'QZXfVqkFCHX7nVebfnJDNHN4rn5DVftf';
+  //first mapquest key: vYcB2ukMaEGdV9xsGvmnIqMhlnL6dadU
+  //second mapquest key: QZXfVqkFCHX7nVebfnJDNHN4rn5DVftf
 // 'map' refers to a <div> element with the ID map
   map = L.mapquest.map('map', {
     center: [39.0997, -94.5786],
