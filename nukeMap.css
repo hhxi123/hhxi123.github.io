@@ -53,7 +53,7 @@ body{
 }
 
 #bigCircle{
-  z-index: 499;
+  z-index: 500;
   width: 200px;
   height: 200px;
   position: fixed;
