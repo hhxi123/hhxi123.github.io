@@ -82,7 +82,7 @@ function divMove(e){
   if (textMarker.getLatLng() != oldLatLng) {
     pinx = e.clientx;
     piny = e.clientY;
-    console.log(textMarker.getLatLng());                  //latitude                                                          longitude
+    console.log(textMarker.getLatLng());
     document.getElementById('coords').innerHTML = '' +  latitude + ' ' + longitude;
 
     fetch('http://open.mapquestapi.com/geocoding/v1/reverse?key=' + L.mapquest.key +
@@ -252,6 +252,10 @@ function divMove(e){
 }
 
 function detonate(lat, lng){
-
+  fetch('http://open.mapquestapi.com/geocoding/v1/reverse?key=' + L.mapquest.key +
+    '&location=' + latitude + ','+ longitude + '&includeRoadMetadata=true&includeNearestIntersection=true')
+  .then(function(data) {
+      return data.json();
+  })
 
 }

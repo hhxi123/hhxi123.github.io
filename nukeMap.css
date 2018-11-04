@@ -51,3 +51,11 @@ body{
   border-color: #000000;
   border-width: medium;
 }
+
+#bigCircle{
+  z-index: 499;
+  height: 200px;
+  weight: 200px;
+  position: fixed;
+  border-radius: 50%;
+}
