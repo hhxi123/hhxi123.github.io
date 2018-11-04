@@ -41,7 +41,7 @@ body{
 
 #Detonate{
   z-index: 500;
-  position: relative;
+  position: absolute;
   margin-left: 1200px;
   margin-bottom: 1200px;
   font-size: 200%;
