@@ -26,7 +26,7 @@ body{
   position: relative;
   margin-left: 1200px;
   font-size-adjust: auto;
-  font-size: 32px;y
+  font-size: 32px;
 }
 
 #state{
@@ -40,14 +40,15 @@ body{
 }
 
 #Detonate{
+  z-index: 500;
+  position: absolute;
+  margin-left: 1200px;
+  margin-top: 500px;
+  font-size: 200%;
+  font-weight: 400;  
   background-color: #970000;
   border-style: solid;
   border-color: #000000;
   border-width: medium;
-  font-size: 200%;
-  font-weight: 400;
-  position: absolute;
-  z-index: 500;
-  margin-left: 1200px;
-  margin-top: 500px;
+
 }
