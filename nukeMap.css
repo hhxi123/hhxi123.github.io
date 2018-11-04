@@ -42,8 +42,8 @@ body{
 #Detonate{
   z-index: 500;
   position: absolute;
-  margin-left: 100px;
-  margin-bottom: 600px;
+  margin-left: 20px;
+  margin-bottom: 550px;
   font-size: 200%;
   font-weight: 400;
   background-color: #970000;
