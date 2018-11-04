@@ -1,11 +1,13 @@
 var pinx = 39.0997;
 var piny = -94.5786;
 var pop_density = [];
+Boolean activeMarker = false;
 
 //main function
 window.onload = function() {
 
-  window.addEventListener('mousemove', divMove, true);
+  window.addEventListener('mouseout', divMove, true);
+
 
   L.mapquest.key = 'QZXfVqkFCHX7nVebfnJDNHN4rn5DVftf';
   //first mapquest key: vYcB2ukMaEGdV9xsGvmnIqMhlnL6dadU
