@@ -46,4 +46,8 @@ body{
   border-width: medium;
   font-size: 200%;
   font-weight: 400;
+  position: absolute;
+  z-index: 500;
+  margin-left: 1200px;
+  margin-top: 500px;
 }
