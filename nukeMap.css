@@ -40,8 +40,10 @@ body{
 }
 
 #Detonate{
-  z-index: -1000;
+  z-index: 500;
   position: absolute;
+  height:500px;
+  width: 500px;
   margin-left: 1200px;
   margin-bottom: 1200px;
   font-size: 200%;
