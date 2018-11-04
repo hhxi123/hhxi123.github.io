@@ -76,13 +76,15 @@ window.onload = function() {
 var oldLatLng;
 
 function divMove(e){
+  var latitude = textMarker._latlng[Object.keys(textMarker._latlng)[0]];
+  var longitude = textMarker._latlng[Object.keys(textMarker._latlng)[1]]
   if (textMarker.getLatLng() != oldLatLng) {
     pinx = e.clientx;
     piny = e.clientY;
     console.log(textMarker.getLatLng());                  //latitude                                                          longitude
-    document.getElementById('coords').innerHTML = '' +  textMarker._latlng[Object.keys(textMarker._latlng)[0]] + ' ' +   textMarker._latlng[Object.keys(textMarker._latlng)[1]];
+    document.getElementById('coords').innerHTML = '' +  latitude + ' ' + longitude;
 
-    fetch('http://open.mapquestapi.com/geocoding/v1/reverse?key=' + L.mapquest.key + '&location=' + textMarker._latlng[Object.keys(textMarker._latlng)[0]] + ','+ textMarker._latlng[Object.keys(textMarker._latlng)[1]] + '&includeRoadMetadata=true&includeNearestIntersection=true')
+    fetch('http://open.mapquestapi.com/geocoding/v1/reverse?key=' + L.mapquest.key + '&location=' + latitude + ','+ longitude + '&includeRoadMetadata=true&includeNearestIntersection=true')
     .then(function(data) {
         return data.json();
     })
