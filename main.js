@@ -15,7 +15,8 @@ window.onload = function() {
   map = L.mapquest.map('map', {
     center: [39.0997, -94.5786],
     layers: L.mapquest.tileLayer('map'),
-    zoom: 5
+    zoom: 5,
+    size:(400,400) 
   });
 
   textMarker = L.mapquest.textMarker([39.0997, -94.5786], {
