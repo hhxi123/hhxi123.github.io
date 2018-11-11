@@ -46,14 +46,6 @@ window.onload = function() {
 
       }
   });
-  setTimeout(function(){
-    window.addEventListener('mouseout', divMove, true);
-  },2000);
-
-  setInterval(function(){
-    console.log(data);
-  }, 1000)
-}
 //   $.ajax({
 //     type: 'GET',
 //     url: 'pop_density.csv',
@@ -80,6 +72,7 @@ window.onload = function() {
 //
 //     console.log(popDensTable);
 // }
+
 
 var oldLatLng;
 
@@ -246,7 +239,7 @@ function divMove(e){
         }
         console.log(stateName);
 
-        console.log("United States Population: " + data[0]["2010_POPULATION"]);
+        // console.log("United States Population: " + data[0]["2010_POPULATION"]);
         for (i=0;i<data.length;i++){
           if(stateName == data[i]["STATE_OR_REGION"]){
             console.log(stateName + " Population: " + data[i]["2010_POPULATION"]);
