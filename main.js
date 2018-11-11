@@ -255,8 +255,8 @@ $("#Detonate").click(detonate);
 
 function detonate(lat, lng){
   fetch('http://open.mapquestapi.com/geocoding/v1/reverse?key=' + L.mapquest.key +
-    '&location=' + latitude + ','+ longitude + '&includeRoadMetadata=true&includeNearestIntersection=true')
-  .then(function(data) {
-      return data.json();
-  })
+    '&location=' + latitude + ','+ longitude + '&includeRoadMetadata=true&includeNearestIntersection=true').then(function(data) {
+        return data.json();
+    })
+
 }
