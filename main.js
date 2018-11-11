@@ -49,6 +49,10 @@ window.onload = function() {
   setTimeout(function(){
     window.addEventListener('mouseout', divMove, true);
   },2000);
+
+  setInterval(function(){
+    console.log(data);
+  }, 1000)
 }
 //   $.ajax({
 //     type: 'GET',
