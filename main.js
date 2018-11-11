@@ -237,7 +237,7 @@ function divMove(e){
         if(stateName.valueOf()==("WY")){
           stateName = "Wyoming";
         }
-        console.log(stateName);
+        //console.log(stateName);
         // var i;
         // var x, count = 0;
         // for (x in data) {
