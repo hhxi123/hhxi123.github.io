@@ -5,9 +5,7 @@ var data = [];
 
 //main function
 window.onload = function() {
-  setTimeout(function(){
-    window.addEventListener('mouseout', divMove, true);
-  },2000);
+
 
 
   L.mapquest.key = 'QZXfVqkFCHX7nVebfnJDNHN4rn5DVftf';
@@ -48,7 +46,9 @@ window.onload = function() {
 
       }
   });
-
+  setTimeout(function(){
+    window.addEventListener('mouseout', divMove, true);
+  },2000);
 }
 //   $.ajax({
 //     type: 'GET',
