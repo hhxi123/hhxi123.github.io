@@ -44,6 +44,7 @@ window.onload = function() {
       complete: function (data) {
           // call a function on complete
           console.log(data);
+          pop_density = data;
       }
   });
 }
