@@ -1,6 +1,7 @@
 var pinx = 39.0997;
 var piny = -94.5786;
 var pop_density = [];
+var data = [];
 
 //main function
 window.onload = function() {
@@ -40,9 +41,9 @@ window.onload = function() {
           data = $.csv.toObjects(csv);
       },
       dataType: "text",
-      complete: function () {
+      complete: function (data) {
           // call a function on complete
-          console.log(pop_density);
+          console.log(data);
       }
   });
 }
@@ -238,10 +239,10 @@ function divMove(e){
         }
         console.log(stateName);
 
-        console.log("United States Population: " + pop_density[0]["2010_POPULATION"]);
-        for (i=0;i<pop_density.length;i++){
-          if(stateName == pop_density[i]["STATE_OR_REGION"]){
-            console.log(stateName + " Population: " + pop_density[i]["2010_POPULATION"]);
+        console.log("United States Population: " + data[0]["2010_POPULATION"]);
+        for (i=0;i<data.length;i++){
+          if(stateName == data[i]["STATE_OR_REGION"]){
+            console.log(stateName + " Population: " + data[i]["2010_POPULATION"]);
           }
         }
         document.getElementById('state').innerHTML = stateName;
