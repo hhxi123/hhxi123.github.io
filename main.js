@@ -239,7 +239,13 @@ function divMove(e){
         }
         console.log(stateName);
         var i;
-        for(i=0;i<Object.keys(data).length;i++){
+        var key, count = 0;
+        for (key in data) {
+          if (data.hasOwnProperty(key)) {
+            count++;
+          }
+        }
+        for(i=0;i<count;i++){
           console.log(data[i]["STATE_OR_REGION"]);
           if(stateName.equalsIgnoreCase(data[i]["STATE_OR_REGION"])){
             console.log(stateName + " Population: " + data[i]["2010_POPULATION"]);
