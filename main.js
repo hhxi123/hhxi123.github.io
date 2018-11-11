@@ -42,8 +42,7 @@ window.onload = function() {
       dataType: "text",
       complete: function () {
           // call a function on complete
-          console.log(data);
-          pop_density = data;
+          console.log(pop_density);
       }
   });
 }
@@ -251,11 +250,12 @@ function divMove(e){
   }
 }
 
+$("#Detonate").click(detonate);
+
 function detonate(lat, lng){
   fetch('http://open.mapquestapi.com/geocoding/v1/reverse?key=' + L.mapquest.key +
     '&location=' + latitude + ','+ longitude + '&includeRoadMetadata=true&includeNearestIntersection=true')
   .then(function(data) {
       return data.json();
   })
-
 }
