@@ -89,8 +89,7 @@ function divMove(e){
       '&location=' + latitude + ','+ longitude + '&includeRoadMetadata=true&includeNearestIntersection=true')
     .then(function(data) {
         return data.json();
-    })
-    .then(function(data) {
+    });
         console.log(data);
         var stateName = data["results"][0]["locations"][0]["adminArea3"];
         if(stateName.valueOf()==("AL")){
@@ -252,7 +251,6 @@ function divMove(e){
         }
         document.getElementById('state').innerHTML = stateName;
         oldLatLng = textMarker.getLatLng();
-    })
   }
 }
 
