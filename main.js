@@ -5,8 +5,9 @@ var data = [];
 
 //main function
 window.onload = function() {
-
-  window.addEventListener('mouseout', divMove, true);
+  setTimeout(function(){
+    window.addEventListener('mouseout', divMove, true);
+  },2000);
 
 
   L.mapquest.key = 'QZXfVqkFCHX7nVebfnJDNHN4rn5DVftf';
@@ -39,15 +40,15 @@ window.onload = function() {
       async: false,
       success: function (csv) {
           data = $.csv.toObjects(csv);
+          console.log(data);
       },
       dataType: "text",
       complete: function (data) {
           // call a function on complete
-          data = data;
-          console.log(data);
-          pop_density = data;
+
       }
   });
+
 }
 //   $.ajax({
 //     type: 'GET',
