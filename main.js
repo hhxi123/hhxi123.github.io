@@ -43,6 +43,7 @@ window.onload = function() {
       dataType: "text",
       complete: function (data) {
           // call a function on complete
+          data = data;
           console.log(data);
           pop_density = data;
       }
