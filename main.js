@@ -239,9 +239,8 @@ function divMove(e){
         }
         console.log(stateName);
 
-        // console.log("United States Population: " + data[0]["2010_POPULATION"]);
         for (i=0;i<data.length;i++){
-          if(stateName == data[i]["STATE_OR_REGION"]){
+          if(stateName.equals(data[i]["STATE_OR_REGION"])){
             console.log(stateName + " Population: " + data[i]["2010_POPULATION"]);
           }
         }
