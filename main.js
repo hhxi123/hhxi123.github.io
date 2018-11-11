@@ -6,7 +6,7 @@ var data = [];
 //main function
 window.onload = function() {
 
-  window.addEventListener("mouseover", divMove);
+  window.addEventListener("mouseover", divMove, false);
 
   L.mapquest.key = 'QZXfVqkFCHX7nVebfnJDNHN4rn5DVftf';
   //first mapquest key: vYcB2ukMaEGdV9xsGvmnIqMhlnL6dadU
