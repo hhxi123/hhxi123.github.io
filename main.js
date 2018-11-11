@@ -244,7 +244,7 @@ function divMove(e){
           count++;
         }
         for(i=0;i<count;i++){
-          console.log(data[i]["STATE_OR_REGION"]);
+          console.log(data[i][STATE_OR_REGION]);
           if(stateName.equalsIgnoreCase(data[i][STATE_OR_REGION])){
             console.log(stateName + " Population: " + data[i][2010_POPULATION]);
           }
