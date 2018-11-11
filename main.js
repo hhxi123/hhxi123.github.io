@@ -238,8 +238,9 @@ function divMove(e){
           stateName = "Wyoming";
         }
         console.log(stateName);
-
-        for (i=0;i<data.length;i++){
+        //console.log(data.length);
+        var i;
+        for(i=0;i<data.length;i++){
           console.log(data[i]["STATE_OR_REGION"]);
           if(stateName.equalsIgnoreCase(data[i]["STATE_OR_REGION"])){
             console.log(stateName + " Population: " + data[i]["2010_POPULATION"]);
