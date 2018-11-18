@@ -27,7 +27,7 @@ window.onload = function() {
     icon: {
       primaryColor: '#333333',
       secondaryColor: '#333333',
-      size: 'sm'
+      size: '100px'
     }
   }).addTo(map);
   console.log(textMarker);
@@ -245,9 +245,8 @@ function divMove(e){
         // }
         // console.log(count)
         for(i=0;i<data.length;i++){
-          console.log(data[i]["STATE_OR_REGION"]);
           if(stateName == (data[i]["STATE_OR_REGION"])){
-            console.log(stateName + " Population: " + data[i]["2010_POPULATION"]);
+            console.log(stateName + " 2010 Population: " + data[i]["2010_POPULATION"]);
           }
         }
         document.getElementById('state').innerHTML = stateName;
