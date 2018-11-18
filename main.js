@@ -93,148 +93,148 @@ function divMove(e){
     .then(function(content) {
         console.log(content);
         var stateName = content["results"][0]["locations"][0]["adminArea3"];
-        if(stateName.valueOf()==("AL")){
+        if(stateName ==("AL")){
           stateName = "Alabama";
         }
-        if(stateName.valueOf()==("AZ")){
+        if(stateName == ("AZ")){
           stateName = "Arizona";
         }
-        if(stateName.valueOf()==("AR")){
+        if(stateName == ("AR")){
           stateName = "Arkansas";
         }
-        if(stateName.valueOf()==("CA")){
+        if(stateName == ("CA")){
           stateName = "California";
         }
-        if(stateName.valueOf()==("CO")){
+        if(stateName == ("CO")){
           stateName = "Colorado";
         }
-        if(stateName.valueOf()==("CT")){
+        if(stateName == ("CT")){
           stateName = "Connecticut";
         }
-        if(stateName.valueOf()==("DE")){
+        if(stateName == ("DE")){
           stateName = "Delaware";
         }
-        if(stateName.valueOf()==("FL")){
+        if(stateName == ("FL")){
           stateName = "Florida";
         }
-        if(stateName.valueOf()==("GA")){
+        if(stateName == ("GA")){
           stateName = "Georgia";
         }
-        if(stateName.valueOf()==("ID")){
+        if(stateName == ("ID")){
           stateName = "Idaho";
         }
-        if(stateName.valueOf()==("IL")){
+        if(stateName == ("IL")){
           stateName = "Illinois";
         }
-        if(stateName.valueOf()==("IN")){
+        if(stateName == ("IN")){
           stateName = "Indiana";
         }
-        if(stateName.valueOf()==("IA")){
+        if(stateName == ("IA")){
           stateName = "Iowa";
         }
-        if(stateName.valueOf()==("KS")){
+        if(stateName == ("KS")){
           stateName = "Kansas";
         }
-        if(stateName.valueOf()==("KY")){
+        if(stateName == ("KY")){
           stateName = "Kentucky";
         }
-        if(stateName.valueOf()==("LA")){
+        if(stateName == ("LA")){
           stateName = "Louisiana";
         }
-        if(stateName.valueOf()==("ME")){
+        if(stateName == ("ME")){
           stateName = "Maine";
         }
-        if(stateName.valueOf()==("MD")){
+        if(stateName == ("MD")){
           stateName = "Maryland";
         }
-        if(stateName.valueOf()==("MA")){
+        if(stateName == ("MA")){
           stateName = "Massachusetts";
         }
-        if(stateName.valueOf()==("MI")){
+        if(stateName == ("MI")){
           stateName = "Michigan";
         }
-        if(stateName.valueOf()==("MN")){
+        if(stateName == ("MN")){
           stateName = "Minnesota";
         }
-        if(stateName.valueOf()==("MS")){
+        if(stateName == ("MS")){
           stateName = "Mississippi";
         }
-        if(stateName.valueOf()==("MO")){
+        if(stateName == ("MO")){
           stateName = "Missouri";
         }
-        if(stateName.valueOf()==("MT")){
+        if(stateName == ("MT")){
           stateName = "Montana";
         }
-        if(stateName.valueOf()==("NE")){
+        if(stateName == ("NE")){
           stateName = "Nebraska";
         }
-        if(stateName.valueOf()==("NV")){
+        if(stateName == ("NV")){
           stateName = "Nevada";
         }
-        if(stateName.valueOf()==("NH")){
+        if(stateName == ("NH")){
           stateName = "New Hampshire";
         }
-        if(stateName.valueOf()==("NJ")){
+        if(stateName == ("NJ")){
           stateName = "New Jersey";
         }
-        if(stateName.valueOf()==("NM")){
+        if(stateName == ("NM")){
           stateName = "New Mexico";
         }
-        if(stateName.valueOf()==("NY")){
+        if(stateName == ("NY")){
           stateName = "New York";
         }
-        if(stateName.valueOf()==("NC")){
+        if(stateName == ("NC")){
           stateName = "North Carolina";
         }
-        if(stateName.valueOf()==("ND")){
+        if(stateName == ("ND")){
           stateName = "North Dakota";
         }
-        if(stateName.valueOf()==("OH")){
+        if(stateName == ("OH")){
           stateName = "Ohio";
         }
-        if(stateName.valueOf()==("OK")){
+        if(stateName == ("OK")){
           stateName = "Oklahoma";
         }
-        if(stateName.valueOf()==("OR")){
+        if(stateName == ("OR")){
           stateName = "Oregon";
         }
-        if(stateName.valueOf()==("PA")){
+        if(stateName == ("PA")){
           stateName = "Pennsylvania";
         }
-        if(stateName.valueOf()==("RI")){
+        if(stateName == ("RI")){
           stateName = "Rhode Island";
         }
-        if(stateName.valueOf()==("SC")){
+        if(stateName == ("SC")){
           stateName = "South Carolina";
         }
-        if(stateName.valueOf()==("SD")){
+        if(stateName == ("SD")){
           stateName = "South Dakota";
         }
-        if(stateName.valueOf()==("TN")){
+        if(stateName == ("TN")){
           stateName = "Tennessee";
         }
-        if(stateName.valueOf()==("TX")){
+        if(stateName == ("TX")){
           stateName = "Texas";
         }
-        if(stateName.valueOf()==("UT")){
+        if(stateName == ("UT")){
           stateName = "Utah";
         }
-        if(stateName.valueOf()==("VT")){
+        if(stateName == ("VT")){
           stateName = "Vermont";
         }
-        if(stateName.valueOf()==("VA")){
+        if(stateName == ("VA")){
           stateName = "Virginia";
         }
-        if(stateName.valueOf()==("WA")){
+        if(stateName == ("WA")){
           stateName = "Washington";
         }
-        if(stateName.valueOf()==("WV")){
+        if(stateName == ("WV")){
           stateName = "West Virginia";
         }
-        if(stateName.valueOf()==("WI")){
+        if(stateName == ("WI")){
           stateName = "Wisconsin";
         }
-        if(stateName.valueOf()==("WY")){
+        if(stateName == ("WY")){
           stateName = "Wyoming";
         }
         //console.log(stateName);
