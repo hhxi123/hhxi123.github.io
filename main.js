@@ -81,8 +81,6 @@ function divMove(e){
   var latitude = textMarker._latlng[Object.keys(textMarker._latlng)[0]];
   var longitude = textMarker._latlng[Object.keys(textMarker._latlng)[1]];
   if (textMarker.getLatLng() != oldLatLng) {
-    textMarker2.setLatLng(textMarker.getLatLng());
-
     pinx = e.clientx;
     piny = e.clientY;
     console.log(textMarker.getLatLng());
