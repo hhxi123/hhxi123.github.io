@@ -13,7 +13,7 @@ body{
 
 #map{
   width: 100%;
-  height: 100%;
+  height: 100%;;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -28,6 +28,7 @@ body{
   font-size-adjust: auto;
   font-size: 32px;
 }
+
 
 #state{
   z-index: 500;
