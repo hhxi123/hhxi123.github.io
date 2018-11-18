@@ -246,7 +246,7 @@ function divMove(e){
         // console.log(count)
         for(i=0;i<data.length;i++){
           console.log(data[i]["STATE_OR_REGION"]);
-          if(stateName.equals(data[i]["STATE_OR_REGION"])){
+          if(stateName == (data[i]["STATE_OR_REGION"])){
             console.log(stateName + " Population: " + data[i]["2010_POPULATION"]);
           }
         }
