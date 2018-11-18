@@ -27,10 +27,23 @@ window.onload = function() {
     icon: {
       primaryColor: '#333333',
       secondaryColor: '#333333',
-      size: '100px'
+      size: 'sm'
     }
   }).addTo(map);
   console.log(textMarker);
+
+  textMarker2 = L.mapquest.textMarker([39.0997, -94.5786], {
+    text: '',
+    //subtext: pinx + ', ' + piny,
+    position: 'right',
+    type: 'circle',
+    draggable: false,
+    icon: {
+      primaryColor: '#ff0000',
+      secondaryColor: '#ff0000',
+      size: 'lg'
+    }
+  }).addTo(map);
 
 
   $.ajax({
@@ -80,6 +93,8 @@ function divMove(e){
   var latitude = textMarker._latlng[Object.keys(textMarker._latlng)[0]];
   var longitude = textMarker._latlng[Object.keys(textMarker._latlng)[1]]
   if (textMarker.getLatLng() != oldLatLng) {
+    textMarker2.setLatLng(textMarker.getLatLng());
+
     pinx = e.clientx;
     piny = e.clientY;
     console.log(textMarker.getLatLng());
