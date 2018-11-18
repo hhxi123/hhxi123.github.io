@@ -15,8 +15,20 @@ window.onload = function() {
   map = L.mapquest.map('map', {
     center: [39.0997, -94.5786],
     layers: L.mapquest.tileLayer('map'),
-    zoom: 5,
+    zoom: 10,
   });
+
+  var options = {
+  elt: document.getElementById('map'),       // ID of map element on page
+  zoom: 10,                                  // initial zoom level of the map
+  latLng: { lat: 39.7439, lng: -105.0200 },  // center of map in latitude/longitude
+  mtype: 'map',                              // map type (map, sat, hyb); defaults to map
+  bestFitMargin: 0,                          // margin offset from map viewport when applying a bestfit on shapes
+  zoomOnDoubleClick: false                    // disable map from zooming in when double-clicking
+  };
+
+// construct an instance of MQA.TileMap with the options object
+  window.map = new MQA.TileMap(options);
 
   textMarker = L.mapquest.textMarker([39.0997, -94.5786], {
     text: 'Place Bomb Here',
@@ -92,7 +104,6 @@ var oldLatLng;
 function divMove(e){
   var latitude = textMarker._latlng[Object.keys(textMarker._latlng)[0]];
   var longitude = textMarker._latlng[Object.keys(textMarker._latlng)[1]];
-  map.zoom = 5;
   if (textMarker.getLatLng() != oldLatLng) {
     textMarker2.setLatLng(textMarker.getLatLng());
 
