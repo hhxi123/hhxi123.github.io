@@ -18,6 +18,8 @@ window.onload = function() {
     zoom: 10,
   });
 
+  console.log(map);
+
   var options = {
     elt: document.getElementById('map'),       // ID of map element on page
     zoom: 10,                                  // initial zoom level of the map
