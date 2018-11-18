@@ -15,10 +15,7 @@ window.onload = function() {
   map = L.mapquest.map('map', {
     center: [39.0997, -94.5786],
     layers: L.mapquest.tileLayer('map'),
-    zoom: 10,
-    boxZoom:{
-      _enabled: false,
-    }
+    zoom: 5,
   });
 
   console.log(map);
@@ -36,20 +33,6 @@ window.onload = function() {
     }
   }).addTo(map);
   console.log(textMarker);
-
-  textMarker2 = L.mapquest.textMarker([39.0997, -94.5786], {
-    text: '',
-    //subtext: pinx + ', ' + piny,
-    position: 'right',
-    type: 'circle',
-    draggable: false,
-    icon: {
-      primaryColor: '#ff0000',
-      secondaryColor: '#ff0000',
-      size: 'lg'
-    }
-  }).addTo(map);
-
 
   $.ajax({
       url: "pop_density.csv",
@@ -270,6 +253,7 @@ function divMove(e){
           }
         }
         document.getElementById('state').innerHTML = stateName;
+        L.circle([latitude,longitude], {radius: 100000}).addTo(map);
         oldLatLng = textMarker.getLatLng();
       });
   }
