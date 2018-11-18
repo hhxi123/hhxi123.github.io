@@ -91,7 +91,8 @@ var oldLatLng;
 
 function divMove(e){
   var latitude = textMarker._latlng[Object.keys(textMarker._latlng)[0]];
-  var longitude = textMarker._latlng[Object.keys(textMarker._latlng)[1]]
+  var longitude = textMarker._latlng[Object.keys(textMarker._latlng)[1]];
+  map.zoom = 5;
   if (textMarker.getLatLng() != oldLatLng) {
     textMarker2.setLatLng(textMarker.getLatLng());
 
