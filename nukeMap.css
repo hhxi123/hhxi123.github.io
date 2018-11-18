@@ -29,6 +29,9 @@ body{
   font-size: 32px;
 }
 
+#deaths{
+  padding: 15px;
+}
 
 #state{
   z-index: 500;
