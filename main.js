@@ -76,6 +76,7 @@ window.onload = function() {
 }
 
 var oldLatLng;
+var pop = "error";
 
 function divMove(e){
   var latitude = textMarker._latlng[Object.keys(textMarker._latlng)[0]];
@@ -248,6 +249,7 @@ function divMove(e){
         for(i=0;i<data.length;i++){
           if(stateName == (data[i]["STATE_OR_REGION"])){
             console.log(stateName + " 2010 Population: " + data[i]["2010_POPULATION"]);
+            pop = data[i]["2010_POPULATION"];
           }
         }
         document.getElementById('state').innerHTML = stateName;
@@ -257,12 +259,7 @@ function divMove(e){
   }
 }
 
-$("#Detonate").click(detonate);
-
-function detonate(lat, lng){
-  fetch('https://open.mapquestapi.com/geocoding/v1/reverse?key=' + L.mapquest.key +
-    '&location=' + latitude + ','+ longitude + '&includeRoadMetadata=true&includeNearestIntersection=true').then(function(data) {
-        return data.json();
-    })
+function detonate(){
+  document.getElementById('deaths').innnerHTML = pop;
 
 }
