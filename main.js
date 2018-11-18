@@ -16,21 +16,10 @@ window.onload = function() {
     center: [39.0997, -94.5786],
     layers: L.mapquest.tileLayer('map'),
     zoom: 10,
+    boxZoom._enabled: false,
   });
 
   console.log(map);
-
-  var options = {
-    elt: document.getElementById('map'),       // ID of map element on page
-    zoom: 10,                                  // initial zoom level of the map
-    latLng: { lat: 39.7439, lng: -105.0200 },  // center of map in latitude/longitude
-    mtype: 'map',                              // map type (map, sat, hyb); defaults to map
-    bestFitMargin: 0,                          // margin offset from map viewport when applying a bestfit on shapes
-    zoomOnDoubleClick: false                    // disable map from zooming in when double-clicking
-  };
-
-// construct an instance of MQA.TileMap with the options object
-  window.map = L.mapquest.TileMap(options);
 
   textMarker = L.mapquest.textMarker([39.0997, -94.5786], {
     text: 'Place Bomb Here',
