@@ -16,7 +16,7 @@ window.onload = function() {
     center: [39.0997, -94.5786],
     layers: L.mapquest.tileLayer('map'),
     zoom: 10,
-    boxZoom._enabled: falses
+    boxZoom._enabled: false
   });
 
   console.log(map);
