@@ -28,7 +28,7 @@ window.onload = function() {
   };
 
 // construct an instance of MQA.TileMap with the options object
-  window.map = new L.mapquest.TileMap(options);
+  window.map = L.mapquest.TileMap(options);
 
   textMarker = L.mapquest.textMarker([39.0997, -94.5786], {
     text: 'Place Bomb Here',
